@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook", "FriendsBook\FriendsBook.csproj", "{C003E696-CD4D-4284-9395-CD8B0ED53320}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook.Core", "FriendsBook.Core\FriendsBook.Core.csproj", "{0E773E54-09D4-4AB5-94EB-A1B77380B93C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook.Infrastructure", "FriendsBook.Infrastructure\FriendsBook.Infrastructure.csproj", "{76C87AA7-7396-406D-AC1E-641E803DFBE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook.Api", "FriendsBook.Api\FriendsBook.Api.csproj", "{89C9C60D-2877-44E7-B997-CB8BADFF5DC9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EA3C7381-DACA-4920-BDF4-AB810C293B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook.Tests", "FriendsBook.Tests\FriendsBook.Tests.csproj", "{7FF19B0C-192C-4D99-96B9-80530A103F88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsBook.Tests.EndToEnd", "FriendsBook.Tests.EndToEnd\FriendsBook.Tests.EndToEnd.csproj", "{44650CA4-A4B7-4648-9C9F-B4D6BE07177F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C003E696-CD4D-4284-9395-CD8B0ED53320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C003E696-CD4D-4284-9395-CD8B0ED53320}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C003E696-CD4D-4284-9395-CD8B0ED53320}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C003E696-CD4D-4284-9395-CD8B0ED53320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E773E54-09D4-4AB5-94EB-A1B77380B93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E773E54-09D4-4AB5-94EB-A1B77380B93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E773E54-09D4-4AB5-94EB-A1B77380B93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E773E54-09D4-4AB5-94EB-A1B77380B93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C87AA7-7396-406D-AC1E-641E803DFBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C87AA7-7396-406D-AC1E-641E803DFBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C87AA7-7396-406D-AC1E-641E803DFBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C87AA7-7396-406D-AC1E-641E803DFBE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C9C60D-2877-44E7-B997-CB8BADFF5DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C9C60D-2877-44E7-B997-CB8BADFF5DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C9C60D-2877-44E7-B997-CB8BADFF5DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C9C60D-2877-44E7-B997-CB8BADFF5DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3C7381-DACA-4920-BDF4-AB810C293B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3C7381-DACA-4920-BDF4-AB810C293B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3C7381-DACA-4920-BDF4-AB810C293B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3C7381-DACA-4920-BDF4-AB810C293B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF19B0C-192C-4D99-96B9-80530A103F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF19B0C-192C-4D99-96B9-80530A103F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF19B0C-192C-4D99-96B9-80530A103F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF19B0C-192C-4D99-96B9-80530A103F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44650CA4-A4B7-4648-9C9F-B4D6BE07177F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44650CA4-A4B7-4648-9C9F-B4D6BE07177F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44650CA4-A4B7-4648-9C9F-B4D6BE07177F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44650CA4-A4B7-4648-9C9F-B4D6BE07177F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
