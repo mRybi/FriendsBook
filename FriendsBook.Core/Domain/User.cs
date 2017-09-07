@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace FriendsBook.Core.Domain
@@ -35,6 +36,32 @@ namespace FriendsBook.Core.Domain
             SetPassword(password, salt);
             SetName(name);
             CreatedAt = DateTime.UtcNow;
+        }
+
+        public void AddFriend(User user)
+        {
+            var isFriend = Friends.SingleOrDefault(x => x.Id == user.Id);
+
+            if(isFriend!=null)
+            {
+                throw new Exception($"User {user.Name} is already on you friends list");
+            }
+
+            _friends.Add(user);
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void DeleteFriend(User user)
+        {
+            var isFriend = Friends.SingleOrDefault(x => x.Id == user.Id);
+
+            if(isFriend==null)
+            {
+                throw new Exception($"User {user.Name} is not on you friends list you can't delete him.");
+            }
+
+            _friends.Remove(user);
+            UpdatedAt = DateTime.UtcNow;
         }
 
         public void SetEmail(string email)
