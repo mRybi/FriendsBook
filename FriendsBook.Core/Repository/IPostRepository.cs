@@ -11,9 +11,9 @@ namespace FriendsBook.Core.Repository
         Task<Post> GetAsync(Guid id);
         Task<IEnumerable<Post>> GetAllUserPostsAsync(User user);
         Task<IEnumerable<Post>> GetAll();
-        Task<Post> AddAsync(User user, string message);
-        Task<Post> DeleteAsync(Guid id);
-        Task<Post> UpdateAsync(Post post);
+        Task AddAsync(Post post);
+        Task DeleteAsync(Guid id);
+        Task UpdateAsync(Post post);
         Task<IEnumerable<Comment>> GetAllCommentsAsync(Post post);
         Task<IEnumerable<User>> GetAllUsersInvolvedAsync(Post post);
     }
