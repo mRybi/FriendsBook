@@ -10,7 +10,7 @@ namespace FriendsBook.Infrastructure.Services
     {
         Task<UserDTO> GetAsync(string email);
         Task<IEnumerable<UserDTO>> BrowseAsync();
-        Task RegisterAsync(Guid userId, string email, string name, string password);
+        Task RegisterAsync(string email, string name, string password);
         Task LoginAsync(string email, string password);
     }
 }

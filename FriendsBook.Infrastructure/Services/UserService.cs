@@ -39,7 +39,7 @@ namespace FriendsBook.Infrastructure.Services
             throw new NotImplementedException();
         }
 
-        public async Task RegisterAsync(Guid userId, string email, string name, string password)
+        public async Task RegisterAsync(string email, string name, string password)
         {
             var user = await _userRespository.GetAsync(email);
 
@@ -48,7 +48,7 @@ namespace FriendsBook.Infrastructure.Services
                 throw new Exception($"User with email {user.Email} already exists");
             }
             var salt = Guid.NewGuid().ToString();//salt wymyslony nie ma encryptera jeszcze
-            user = new User(userId, email, password, salt, name);
+            user = new User(Guid.NewGuid(), email, password, salt, name);
             await _userRespository.AddAsync(user);
         }
     }
