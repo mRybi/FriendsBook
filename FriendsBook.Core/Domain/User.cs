@@ -68,7 +68,7 @@ namespace FriendsBook.Core.Domain
         {
             if (string.IsNullOrWhiteSpace(email))
                 throw new Exception("Email cannot be empty");
-            else if (email.Length > 6)
+            else if (email.Length < 6)
                 throw new Exception("Email cannot be shorter than 6 characters");
 
             Email = email;

@@ -11,7 +11,11 @@ using FriendsBook.Infrastructure.Command;
 
 namespace FriendsBook.Api.Controllers
 {
-[Route("[controller]")]
+
+    [Route("[controller]")]
+
+
+
     public class UsersController:Controller
     {
         private readonly IUserService _userService;
